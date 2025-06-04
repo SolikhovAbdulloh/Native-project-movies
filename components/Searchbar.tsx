@@ -8,14 +8,9 @@ interface Props {
   value?: string;
   onChangeText?: (text: string) => void;
 }
-const SearchbarInput = ({
-  onPress,
-  placeholder,
-  value,
-  onChangeText,
-}: Props) => {
+const SearchbarInput = ({ placeholder, value, onChangeText }: Props) => {
   return (
-    <View className="flex-row bg-[#31a8ba]  items-center rounded-full px-5 py-4">
+    <View className="flex-row bg-[#07dcec]  items-center rounded-full px-5 py-4">
       <Image
         source={icons.search}
         className="size-6"
@@ -24,7 +19,7 @@ const SearchbarInput = ({
       />
       <TextInput
         placeholder={placeholder}
-        // onPress={onPress}
+        value={value}
         onChangeText={onChangeText}
         className="flex-1 ml-2"
       />

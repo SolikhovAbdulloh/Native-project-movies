@@ -11,7 +11,6 @@ import {
   Text,
   View,
 } from "react-native";
-import SearchbarInput from "../../components/Searchbar";
 
 export default function Index() {
   const router = useRouter();
@@ -36,15 +35,11 @@ export default function Index() {
         <Image source={images.logo} className="w-14 h-[50] mb-5 m-auto mt-20" />
 
         {loading ? (
-          <ActivityIndicator size="large" color="#0000ff" />
+          <ActivityIndicator size="large" color="red" />
         ) : error ? (
           <Text>{error?.message}</Text>
         ) : (
           <View className="flex-1 mt-6">
-            <SearchbarInput
-              onPress={() => router.push("/search")}
-              placeholder="Search for a movie"
-            />
             <>
               <Text className="mt-3 text-lg mb-4 font-bold text-[#09215d]">
                 Latest Movies

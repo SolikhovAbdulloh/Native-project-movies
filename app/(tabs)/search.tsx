@@ -57,7 +57,9 @@ export default function Search() {
                 onChangeText={(text: string) => setsearch(text)}
               />
             </View>
-            {loading && <ActivityIndicator size="large" className="my-3" />}
+            {loading && (
+              <ActivityIndicator size="large" className="my-3" color="red" />
+            )}
             {error && (
               <Text className="text-[red] font-semibold">
                 Error:{error.message}
